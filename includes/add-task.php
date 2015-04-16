@@ -8,6 +8,6 @@
   $mysqli = new mysqli('localhost', 'root', 'root', 'tasks');
   $mysqli ->query("INSERT INTO tasks VALUES ('','$task', 'date', 'time')");
 
-  $query = "SELECT * FROM tasks WHERE tasks='$tasks' and date='$date' and time='$time'";  
+  $query = "SELECT * FROM tasks WHERE tasks='$tasks' and date='$date' and time='$time' ";  
 
 ?>
