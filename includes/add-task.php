@@ -5,7 +5,7 @@
 
   include('connect.php');
 
-  $mysqli = new mysqli('localhost', 'root', 'root', 'tasks');
+  $mysqli = new mysqli('localhost', 'root', 'root', 'todo');
   $mysqli ->query("INSERT INTO tasks VALUES ('','$task', 'date', 'time')");
   //puts the data in our database
 
