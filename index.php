@@ -34,9 +34,14 @@
 		});
 	}
 
-	$('.delete-button').click(function()){
+	$('.delete-button').click(function(){
+		var current_element = $(this);
+		var task_id = $this('id');
+
+		$.post('includes/delete-tasks.php', {id:task_id}, function(){
 		current_element.parent().fadeout("fast", function(){
 			$(this).remove();
+			});
 		});
 	});
 
