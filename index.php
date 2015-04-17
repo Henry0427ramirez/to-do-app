@@ -34,5 +34,11 @@
 		});
 	}
 
+	$('.delete-button').click(function()){
+		current_element.parent().fadeout("fast", function(){
+			$(this).remove();
+		});
+	});
+
 </script>
 </html> 
