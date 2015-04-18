@@ -3,6 +3,8 @@
 <head>
    <title>Henry's To-Do List</title>
    <link rel="stylesheet" type="text/css" href="css/main.css">
+   <link rel="stylesheet" type="text/css" href="css/normalize.css">
+   <link rel="stylesheet" type="text/css" href="css/reset.css">
 </head>
 <body>
   <div class="wrap">
@@ -12,7 +14,7 @@
 				$mysqli - new mysqli('localhost', 'root', 'root', 'todo'); 
 				$query = "SELECT * FROM tasks ORDER BY date ASC, time ASC";
 				if($result = $mysqli->query($query)) {
-					$numrows = $result->num_rows:
+					$numrows = $result->num_rows;
 					if($numrows>0){
 						while($rows = $result->fetch_assoc()){
 							$task_id = $row['id'];
@@ -35,7 +37,7 @@
   	</form>
   </div>
 </body>
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script>
 	add_task(); //calling the add task function
 
